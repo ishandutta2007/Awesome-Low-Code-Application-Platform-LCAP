@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#181335" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="accentGlow1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="accentGlow2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Text Gradients -->
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#f8fafc" />
+      <stop offset="80%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <linearGradient id="badgeBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" />
+      <circle cx="40" cy="40" r="1.5" fill="rgba(255, 255, 255, 0.08)" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+    </filter>
+
+    <style>
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(1deg); }
+      }
+      @keyframes floatFast {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(10px) rotate(-1.5deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.65; transform: scale(1.08); }
+      }
+      @keyframes flowDash {
+        0% { stroke-dashoffset: 200; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes beamMove {
+        0% { transform: translateX(-300px); opacity: 0; }
+        30% { opacity: 0.8; }
+        70% { opacity: 0.8; }
+        100% { transform: translateX(1300px); opacity: 0; }
+      }
+
+      .bg-pulse-1 { animation: pulseGlow 8s ease-in-out infinite; transform-origin: 250px 100px; }
+      .bg-pulse-2 { animation: pulseGlow 10s ease-in-out infinite 2s; transform-origin: 950px 300px; }
+      .float-card-1 { animation: floatSlow 7s ease-in-out infinite; }
+      .float-card-2 { animation: floatFast 8s ease-in-out infinite 1s; }
+      .flow-circuit { stroke-dasharray: 8 8; animation: flowDash 25s linear infinite; }
+      .beam-line { animation: beamMove 5s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+
+      .title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 44px;
+        letter-spacing: -0.025em;
+      }
+      .subtitle {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        fill: #94a3b8;
+        letter-spacing: -0.01em;
+      }
+      .pill-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+      }
+      .card-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #cbd5e1;
+      }
+      .card-sub {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        fill: #64748b;
+      }
+    </style>
+  </defs>
+
+  <!-- Solid Background -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
+  <!-- Animated Glowing Ambience Orbs in Background -->
+  <circle cx="220" cy="90" r="180" fill="url(#accentGlow1)" filter="url(#softGlow)" class="bg-pulse-1" />
+  <circle cx="1000" cy="320" r="220" fill="url(#accentGlow2)" filter="url(#softGlow)" class="bg-pulse-2" />
+
+  <!-- Grid Overlay -->
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <!-- Circuit Network Flows in Background -->
+  <g opacity="0.45">
+    <path d="M 50 210 Q 300 240 600 210 T 1150 210" fill="none" stroke="#475569" stroke-width="1.5" />
+    <path d="M 50 140 C 250 140 350 280 600 280 C 850 280 950 140 1150 140" fill="none" stroke="#38bdf8" stroke-width="1.5" class="flow-circuit" />
+    <path d="M 100 350 Q 400 320 700 360 T 1100 320" fill="none" stroke="#818cf8" stroke-width="1.5" class="flow-circuit" />
+  </g>
+
+  <!-- Subtle Dynamic Tech / Modular App Builder Mock Cards in Background Perimeter -->
+  <!-- Left Side Floating Architecture Card -->
+  <g class="float-card-1" opacity="0.38">
+    <rect x="50" y="55" width="220" height="110" rx="12" fill="#0f172a" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2" />
+    <circle cx="75" cy="80" r="8" fill="#38bdf8" opacity="0.8" />
+    <text x="92" y="84" class="card-title">Visual App Engine</text>
+    <rect x="72" y="102" width="176" height="8" rx="4" fill="#334155" />
+    <rect x="72" y="118" width="120" height="8" rx="4" fill="#1e293b" />
+    <rect x="72" y="134" width="145" height="8" rx="4" fill="#1e293b" />
+  </g>
+
+  <!-- Left Side Database Card -->
+  <g class="float-card-2" opacity="0.32">
+    <rect x="65" y="270" width="200" height="100" rx="12" fill="#0f172a" stroke="rgba(129, 140, 248, 0.4)" stroke-width="1.2" />
+    <circle cx="88" cy="295" r="7" fill="#818cf8" opacity="0.8" />
+    <text x="105" y="299" class="card-title">Data Fabric &amp; APIs</text>
+    <rect x="85" y="315" width="150" height="6" rx="3" fill="#334155" />
+    <rect x="85" y="328" width="110" height="6" rx="3" fill="#1e293b" />
+    <rect x="85" y="341" width="135" height="6" rx="3" fill="#1e293b" />
+  </g>
+
+  <!-- Right Side Workflow Automation Card -->
+  <g class="float-card-2" opacity="0.38">
+    <rect x="930" y="55" width="220" height="110" rx="12" fill="#0f172a" stroke="rgba(168, 85, 247, 0.4)" stroke-width="1.2" />
+    <circle cx="955" cy="80" r="8" fill="#a855f7" opacity="0.8" />
+    <text x="972" y="84" class="card-title">Workflow Automation</text>
+    <rect x="952" y="102" width="176" height="8" rx="4" fill="#334155" />
+    <rect x="952" y="118" width="130" height="8" rx="4" fill="#1e293b" />
+    <rect x="952" y="134" width="155" height="8" rx="4" fill="#1e293b" />
+  </g>
+
+  <!-- Right Side Deployment Card -->
+  <g class="float-card-1" opacity="0.32">
+    <rect x="935" y="265" width="215" height="105" rx="12" fill="#0f172a" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2" />
+    <circle cx="960" cy="290" r="7" fill="#38bdf8" opacity="0.8" />
+    <text x="977" y="294" class="card-title">Self-Hosted / Cloud</text>
+    <rect x="957" y="310" width="165" height="6" rx="3" fill="#334155" />
+    <rect x="957" y="323" width="125" height="6" rx="3" fill="#1e293b" />
+    <rect x="957" y="336" width="140" height="6" rx="3" fill="#1e293b" />
+  </g>
+
+  <!-- Center Backing Glow to Guarantee Maximum Text Contrast -->
+  <ellipse cx="600" cy="205" rx="440" ry="140" fill="#0a0f1d" opacity="0.88" />
+
+  <!-- ======================================================== -->
+  <!-- FOREGROUND LAYER: TITLE, SUBTITLE & BADGES (CRITICAL)   -->
+  <!-- Always positioned on top and fully readable             -->
+  <!-- ======================================================== -->
+
+  <!-- Top Pill / Status Badge -->
+  <g transform="translate(600, 75)">
+    <rect x="-190" y="-18" width="380" height="36" rx="18" fill="rgba(30, 41, 59, 0.9)" stroke="url(#badgeBorder)" stroke-width="1.5" />
+    <circle cx="-165" cy="0" r="5" fill="#38bdf8" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="-148" y="4" class="pill-text" fill="#38bdf8">CURATED ECOSYSTEM  •  OCTOBER 2026</text>
+    <path d="M 148 -4 L 158 0 L 148 4" stroke="#818cf8" stroke-width="1.5" fill="none" />
+  </g>
+
+  <!-- Main Headline Title -->
+  <text x="600" y="155" text-anchor="middle" class="title" fill="url(#titleGradient)" filter="url(#glow)">
+    Low-Code Application Platforms
+  </text>
+  <text x="600" y="155" text-anchor="middle" class="title" fill="url(#titleGradient)">
+    Low-Code Application Platforms
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="200" text-anchor="middle" class="subtitle">
+    Enterprise App Engines, SaaS Builders, Internal Tools &amp; Self-Hosted Open-Source Frameworks
+  </text>
+
+  <!-- Feature Tags / Capabilities Bar in Foreground -->
+  <g transform="translate(600, 275)">
+    <!-- Pill 1: Visual App Builders -->
+    <g transform="translate(-460, 0)">
+      <rect x="0" y="0" width="170" height="36" rx="18" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1" />
+      <text x="85" y="22" text-anchor="middle" class="pill-text" fill="#e2e8f0">⚡ Visual Builders</text>
+    </g>
+
+    <!-- Pill 2: Enterprise LCAP -->
+    <g transform="translate(-275, 0)">
+      <rect x="0" y="0" width="165" height="36" rx="18" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(129, 140, 248, 0.4)" stroke-width="1" />
+      <text x="82" y="22" text-anchor="middle" class="pill-text" fill="#e2e8f0">🏢 Enterprise LCAP</text>
+    </g>
+
+    <!-- Pill 3: Internal Tools -->
+    <g transform="translate(-95, 0)">
+      <rect x="0" y="0" width="160" height="36" rx="18" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(168, 85, 247, 0.4)" stroke-width="1" />
+      <text x="80" y="22" text-anchor="middle" class="pill-text" fill="#e2e8f0">🛠️ Internal Tools</text>
+    </g>
+
+    <!-- Pill 4: Open Source -->
+    <g transform="translate(80, 0)">
+      <rect x="0" y="0" width="170" height="36" rx="18" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(45, 212, 191, 0.4)" stroke-width="1" />
+      <text x="85" y="22" text-anchor="middle" class="pill-text" fill="#e2e8f0">🔓 Self-Hosted OSS</text>
+    </g>
+
+    <!-- Pill 5: AI Workflows -->
+    <g transform="translate(265, 0)">
+      <rect x="0" y="0" width="175" height="36" rx="18" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(251, 146, 60, 0.4)" stroke-width="1" />
+      <text x="87" y="22" text-anchor="middle" class="pill-text" fill="#e2e8f0">🤖 AI Automation</text>
+    </g>
+  </g>
+
+  <!-- Interactive Dynamic Bottom Light Runner -->
+  <g>
+    <rect x="150" y="380" width="900" height="2" fill="rgba(255, 255, 255, 0.08)" />
+    <rect x="0" y="379" width="160" height="4" rx="2" fill="url(#titleGradient)" class="beam-line" filter="url(#glow)" />
+  </g>
+</svg>
