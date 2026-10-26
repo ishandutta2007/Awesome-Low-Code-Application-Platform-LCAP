@@ -29,6 +29,7 @@ Whether you are an **Enterprise Architect** designing governance guardrails, a *
 - [🧭 Decision & Architecture Matrix](#-decision--architecture-matrix)
 - [💡 Key Evaluation Criteria](#-key-evaluation-criteria)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
 - [📈 Star History](#-star-history)
 - [⚖️ Disclaimer & License](#-disclaimer--license)
 
@@ -146,6 +147,27 @@ We actively welcome contributions from creators, maintainers, and enterprise arc
    - Exact starting pricing and explicit free tier/trial details.
    - For open-source repos: include the `img.shields.io` social star badge linked to the `/stargazers` URL and maintain descending star count order.
 4. Open a **Pull Request** with a concise description of why the tool qualifies.
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you for visiting and using this curated ecosystem! Maintaining this list, tracking new enterprise announcements, and verifying open-source repositories takes considerable effort.
+
+If you find this repository valuable:
+- ⭐ **Star this repository** to help others discover it.
+- 🍴 **Fork and share** it with your engineering team, architecture peers, and builder communities.
+- 📢 **Share** on Twitter/X, LinkedIn, and developer channels.
+- ☕ **Buy me a coffee / Sponsor**: If you'd like to support ongoing curation and development, consider sponsoring via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007) or through the badge below:
+
+<p align="left">
+  <a href="https://github.com/sponsors/ishandutta2007">
+    <img src="https://img.shields.io/badge/Sponsor-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=github-sponsors" alt="Sponsor on GitHub" />
+  </a>
+  <a href="https://github.com/sponsors/ishandutta2007">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" />
+  </a>
+</p>
 
 ---
 
